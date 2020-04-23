@@ -39,6 +39,10 @@
 ;; do not display continuation lines
 (setq-default truncate-lines 1)
 
+;; prefer side-by-side split
+(setq split-height-threshold nil)
+(setq split-width-threshold 200)
+
 ;; titlebar
 (add-to-list 'default-frame-alist '(ns-transparent-titlebar . 1))
 (add-to-list 'default-frame-alist '(ns-appearance . dark))
