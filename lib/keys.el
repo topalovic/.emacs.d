@@ -1,6 +1,7 @@
 ;;; keys
 
-;; disable frame killers
+;; disable mac specific keys
+(global-set-key (kbd "s-t") nil)
 (global-set-key (kbd "s-q") nil)
 (global-set-key (kbd "s-w") nil)
 
