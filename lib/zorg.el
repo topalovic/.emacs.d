@@ -7,5 +7,6 @@
 (setq org-startup-folded 'showall)
 (setq org-agenda-use-time-grid nil)
 (setq org-agenda-window-setup 'current-window)
+(setq calendar-week-start-day 1)
 
 (provide 'zorg)
