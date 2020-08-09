@@ -38,6 +38,8 @@
   :init
   (setq wgrep-auto-save-buffer t))
 
+(use-package wgrep-ag)
+
 (use-package whitespace
   :init
   (setq whitespace-style '(face tabs trailing))
