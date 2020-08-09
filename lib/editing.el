@@ -26,6 +26,8 @@
 ;; treat camel case as separate words
 (global-subword-mode 1)
 
+(setq-default fill-column 79)
+
 ;; delete trailing whitespace on save
 (add-hook 'before-save-hook
           (lambda ()
