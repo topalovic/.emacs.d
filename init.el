@@ -7,8 +7,8 @@
 (require 'editing)
 (require 'navigation)
 (require 'development)
+(require 'orgs)
 (require 'utils)
 (require 'keys)
-(require 'zorg)
 
 ;; fin.
