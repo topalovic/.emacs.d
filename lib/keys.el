@@ -1,6 +1,7 @@
 ;;; keys
 
-;; disable mac specific keys
+;; disable intrusive OS keys
+(global-set-key (kbd "C-z") nil)
 (global-set-key (kbd "s-t") nil)
 (global-set-key (kbd "s-q") nil)
 (global-set-key (kbd "s-w") nil)
