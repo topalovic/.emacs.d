@@ -23,7 +23,6 @@
 (global-set-key (kbd "C-r") 'query-replace-regexp)
 (global-set-key (kbd "C-S-d") 'duplicate-current-line)
 (global-set-key (kbd "M-Q") 'unfill-paragraph)
-(global-set-key (kbd "<C-tab>") 'hippie-expand)
 
 ;; tools
 (global-set-key (kbd "M-i") 'imenu)

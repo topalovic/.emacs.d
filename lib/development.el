@@ -65,6 +65,30 @@
   :bind
   (("C-c C-u" . string-inflection-all-cycle)))
 
+(use-package company
+  :bind
+  (("<C-tab>" . company-complete)
+   :map company-active-map
+   ("<tab>" . company-complete-common-or-cycle)
+   ("C-p" . company-select-previous)
+   ("C-n" . company-select-next)
+   :map company-search-map
+   ("C-p" . company-select-previous)
+   ("C-n" . company-select-next))
+
+  :hook
+  (after-init . global-company-mode)
+
+  :config
+  (setq company-transformers '(company-sort-by-backend-importance)
+        company-dabbrev-downcase nil
+        company-dabbrev-ignore-case nil
+        company-idle-delay 0.75
+        company-minimum-prefix-length 2
+        company-require-match nil
+        company-show-numbers t
+        company-tooltip-align-annotations t))
+
 ;; indentation
 
 (setq-default c-basic-offset 4)
