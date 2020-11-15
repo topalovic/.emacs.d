@@ -66,6 +66,7 @@
 
   (with-eval-after-load 'org
     (set-face-attribute 'org-level-1 nil :height 1.0)
+    (set-face-attribute 'org-block nil :background (doom-darken (doom-color 'bg-alt) 0.04) :extend t)
     (set-face-attribute 'org-scheduled nil :foreground (doom-color 'base7))
     (set-face-attribute 'org-scheduled-today nil :foreground (doom-color 'fg))
     (set-face-attribute 'org-agenda-date-weekend nil :inherit 'org-agenda-date :foreground 'unspecified))

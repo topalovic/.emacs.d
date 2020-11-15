@@ -2,6 +2,8 @@
 
 (require 'org)
 
+(setq org-hide-leading-stars t)
+
 ;; go get organized!
 
 (setq org-agenda-files '("~/org/life")
