@@ -26,7 +26,16 @@
    ("C-c k" . counsel-ag))
 
   :init
-  (setq counsel-ag-base-command "ag --width 128 --nocolor --nogroup %s"))
+  (setq counsel-ag-base-command "ag --width 128 --nocolor --nogroup %s")
+
+  :config
+  (defun my/yank-pop (orig-fun &rest args)
+    "If last action was not a yank, run `counsel-yank-pop' instead."
+    (interactive "*p")
+    (if (eq last-command 'yank)
+        (apply orig-fun args)
+      (counsel-yank-pop)))
+  (advice-add 'yank-pop :around #'my/yank-pop))
 
 (use-package projectile
   :bind-keymap
