@@ -2,6 +2,10 @@
 
 (use-package smex)
 
+(use-package which-key
+  :config
+  (which-key-mode))
+
 (use-package ivy
   :bind
   (("C-s" . swiper))
