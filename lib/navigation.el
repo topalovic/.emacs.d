@@ -6,6 +6,12 @@
   :config
   (which-key-mode))
 
+(use-package avy
+  :config
+  (setq avy-background t)
+  :bind
+  (("C-;" . avy-goto-char-2)))
+
 (use-package ivy
   :bind
   (("C-s" . swiper))
