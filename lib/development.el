@@ -53,6 +53,9 @@
 
 (use-package magit)
 
+(use-package dockerfile-mode
+  :mode "Dockerfile")
+
 (use-package smartparens
   :config
   (smartparens-global-mode 1))
