@@ -26,6 +26,10 @@
 (use-package clojure-mode)
 (use-package cider)
 
+;; rust
+
+(use-package rust-mode)
+
 ;; markup / frontend
 
 (use-package markdown-mode
