@@ -43,7 +43,9 @@
 (use-package whitespace
   :init
   (setq whitespace-style '(face tabs trailing))
+
   :config
+  (set-face-attribute 'whitespace-tab nil :underline t)
   (global-whitespace-mode 1))
 
 (use-package yasnippet-snippets
