@@ -58,6 +58,12 @@
   :config
   (projectile-mode 1))
 
+(use-package projectile-rails
+  :config
+  (projectile-rails-global-mode)
+  (define-key projectile-rails-mode-map (kbd "s-r") 'projectile-rails-command-map)
+  (define-key projectile-rails-mode-map (kbd "C-c C-p") 'projectile-rails-command-map))
+
 (use-package ibuffer-vc
   :config
   (add-hook 'ibuffer-hook
