@@ -12,6 +12,8 @@
 
 (use-package rspec-mode
   :config
+  (setq rspec-primary-source-dirs '("app"))
+
   (eval-after-load 'rspec-mode
     '(rspec-install-snippets)))
 
