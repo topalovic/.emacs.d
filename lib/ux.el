@@ -55,7 +55,7 @@
              '(fullscreen . maximized))
 
 ;; font
-(add-to-list 'default-frame-alist '(font . "Noto Mono for Powerline-11"))
+(add-to-list 'default-frame-alist '(font . "Fira Mono for Powerline-11"))
 
 (use-package doom-themes
   :init
