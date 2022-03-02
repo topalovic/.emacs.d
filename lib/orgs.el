@@ -6,7 +6,7 @@
 
 ;; go get organized!
 
-(setq org-agenda-files '("~/org/life")
+(setq org-agenda-files '("~/org/todo")
       org-agenda-use-time-grid nil
       org-agenda-window-setup 'current-window
       org-modules '(org-habit)
@@ -19,7 +19,7 @@
 (use-package deft
   :config
   (setq deft-extensions '("org" "md")
-        deft-directory "~/org/anon"
+        deft-directory "~/org/wiki"
         deft-use-filename-as-title t
         deft-auto-save-interval 0))
 
