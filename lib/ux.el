@@ -2,6 +2,19 @@
 
 (fset 'yes-or-no-p 'y-or-n-p)
 
+;; key assistance
+(use-package which-key
+  :config
+  (which-key-mode))
+
+;; better help buffer
+(use-package helpful
+  :bind
+  (("C-h f" . helpful-callable))
+  (("C-h v" . helpful-variable))
+  (("C-h k" . helpful-key))
+  (("C-h ," . helpful-at-point)))
+
 ;; blank scratch buffer
 (setq inhibit-splash-screen 1)
 (setq initial-scratch-message nil)

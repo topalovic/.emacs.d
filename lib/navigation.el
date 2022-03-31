@@ -2,10 +2,6 @@
 
 (use-package smex)
 
-(use-package which-key
-  :config
-  (which-key-mode))
-
 (use-package avy
   :config
   (setq avy-background t)
@@ -37,6 +33,8 @@
 
   :init
   (setq counsel-ag-base-command "ag --width 128 --nocolor --nogroup %s")
+  (setq counsel-describe-function-function #'helpful-callable)
+  (setq counsel-describe-variable-function #'helpful-variable)
 
   :config
   (defun my/yank-pop (orig-fun &rest args)
