@@ -18,8 +18,8 @@
     '(rspec-install-snippets)))
 
 (add-hook 'ruby-mode-hook
-          '(lambda ()
-             (local-set-key (kbd "C-c C-u") 'string-inflection-ruby-style-cycle)))
+          (lambda ()
+            (local-set-key (kbd "C-c C-u") 'string-inflection-ruby-style-cycle)))
 
 (setq ruby-insert-encoding-magic-comment nil)
 
