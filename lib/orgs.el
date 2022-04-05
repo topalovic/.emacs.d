@@ -2,15 +2,15 @@
 
 (require 'org)
 
-(setq org-hide-leading-stars t)
-
 ;; go get organized!
 
 (setq org-agenda-files '("~/org/todo")
       org-agenda-use-time-grid nil
       org-agenda-window-setup 'current-window
       org-modules '(org-habit)
-      org-return-follows-link 1
+      org-return-follows-link t
+      org-hide-leading-stars t
+      org-adapt-indentation t
       org-startup-folded 'showall
       calendar-week-start-day 1)
 
