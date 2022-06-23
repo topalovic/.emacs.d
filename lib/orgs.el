@@ -20,6 +20,7 @@
   :config
   (setq deft-extensions '("org" "md")
         deft-directory "~/org/wiki"
+        deft-recursive t
         deft-use-filename-as-title t
         deft-auto-save-interval 0))
 
