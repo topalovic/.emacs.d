@@ -27,7 +27,8 @@
 
 ;; tools
 (global-set-key (kbd "M-i") 'imenu)
-(global-set-key (kbd "C-x g") 'magit-status)
+(global-set-key (kbd "C-c g") 'magit-status)
+(global-set-key (kbd "C-c b") 'magit-blame-addition)
 (global-set-key (kbd "C-c \\") 'smart-shell-command)
 (global-set-key (kbd "C-c a") 'org-agenda)
 
