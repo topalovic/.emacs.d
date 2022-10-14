@@ -15,7 +15,8 @@
 (global-set-key (kbd "C-c r") 'rename-buffer-and-file)
 (global-set-key (kbd "C-c d") 'delete-buffer-and-file)
 
-;; word & region killing
+;; marking & killing
+(global-set-key (kbd "M-o") 'mark-whole-word)
 (global-set-key (kbd "C-w") 'backward-kill-word)
 (global-set-key (kbd "C-x C-k") 'kill-region)
 (global-set-key (kbd "C-c C-k") 'kill-region)

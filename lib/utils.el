@@ -71,4 +71,29 @@
           (shell-command-on-region p m command)
         (shell-command-on-region p m command t t)))))
 
+(defun mark-whole-word (&optional arg allow-extend)
+  "Like `mark-word', but selects whole words and skips over whitespace.
+if you use a negative prefix arg then select words backward.
+otherwise select them forward.
+
+If cursor starts in the middle of word then select that whole word.
+
+If the command is repeated or the mark is active, select the next
+NUM words, where NUM is the numeric prefix argument. (Negative
+NUM selects backward.)"
+  (interactive "P\np")
+  (let ((num (prefix-numeric-value arg)))
+    (unless (eq last-command this-command)
+      (if (natnump num)
+          (skip-syntax-forward "\\s-")
+        (skip-syntax-backward "\\s-")))
+    (unless (or (eq last-command this-command)
+                (if (natnump num)
+                    (looking-at "\\b")
+                  (looking-back "\\b")))
+      (if (natnump num)
+          (left-word)
+        (right-word)))
+    (mark-word arg allow-extend)))
+
 (provide 'utils)
