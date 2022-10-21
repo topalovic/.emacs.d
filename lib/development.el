@@ -17,6 +17,11 @@
   (eval-after-load 'rspec-mode
     '(rspec-install-snippets)))
 
+(use-package rubocop
+  :config
+  (setq rubocop-autocorrect-command "rubocop -A --format emacs")
+  (add-hook 'ruby-mode-hook 'rubocop-mode))
+
 (add-hook 'ruby-mode-hook
           (lambda ()
             (local-set-key (kbd "C-c C-u") 'string-inflection-ruby-style-cycle)))
