@@ -84,4 +84,22 @@
 
 (setq vc-follow-symlinks t)
 
+;; dired
+
+(require 'ls-lisp)
+(setq ls-lisp-dirs-first t)
+(setq ls-lisp-use-insert-directory-program nil)
+
+(setq dired-listing-switches "-alh")
+(add-hook 'dired-mode-hook 'dired-hide-details-mode)
+
+(use-package dired-subtree
+  :ensure t
+  :after dired
+  :init
+  (setq dired-subtree-use-backgrounds nil)
+  :bind
+  (:map dired-mode-map
+              ("TAB" . dired-subtree-toggle)))
+
 (provide 'navigation)
