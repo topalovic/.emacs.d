@@ -1,5 +1,15 @@
 ;;; development
 
+;; asdf tool version manager
+
+(let* ((asdf-path "$HOME/.asdf")
+       (path (substitute-env-vars (concat asdf-path "/shims:" asdf-path "/bin:$PATH"))))
+  (setenv "PATH" path)
+  (setq exec-path
+        (append
+         (split-string-and-unquote path ":")
+         exec-path)))
+
 ;; ruby
 
 (use-package inf-ruby
