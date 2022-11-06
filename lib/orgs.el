@@ -14,7 +14,7 @@
       org-startup-folded 'showall
       calendar-week-start-day 1)
 
-;; organon
+;; wiki
 
 (use-package deft
   :config
@@ -23,6 +23,8 @@
         deft-recursive t
         deft-use-filename-as-title t
         deft-auto-save-interval 0))
+
+(defalias 'wiki 'deft)
 
 ;; babel
 
