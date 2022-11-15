@@ -10,15 +10,15 @@
          (split-string-and-unquote path ":")
          exec-path)))
 
+;; eglot
+
+(use-package eglot)
+
 ;; ruby
 
 (use-package inf-ruby
   :config
   (add-hook 'ruby-mode-hook 'inf-ruby-minor-mode))
-
-(use-package robe
-  :config
-  (add-hook 'ruby-mode-hook 'robe-mode))
 
 (use-package rspec-mode
   :config
