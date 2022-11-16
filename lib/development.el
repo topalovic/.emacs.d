@@ -12,7 +12,9 @@
 
 ;; eglot
 
-(use-package eglot)
+(use-package eglot
+  :config
+  (setq eglot-stay-out-of '(imenu)))
 
 ;; ruby
 
