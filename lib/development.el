@@ -47,7 +47,10 @@
 
 ;; rust
 
-(use-package rust-mode)
+(use-package rustic
+  :config
+  (setq rustic-lsp-client 'eglot
+        rustic-format-on-save nil))
 
 ;; markup / frontend
 
