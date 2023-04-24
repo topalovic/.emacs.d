@@ -44,7 +44,10 @@
    (shell . t)
    (sql . t)))
 
+;; src blocks
+
 (setq org-confirm-babel-evaluate nil)
+(setq org-edit-src-content-indentation 0)
 
 ;; latex
 
