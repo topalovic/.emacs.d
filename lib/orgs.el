@@ -44,6 +44,8 @@
    (shell . t)
    (sql . t)))
 
+(setq org-confirm-babel-evaluate nil)
+
 ;; latex
 
 ;; to be inserted in every latex header
