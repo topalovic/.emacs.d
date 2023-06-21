@@ -1,5 +1,11 @@
 ;;; utils
 
+(defun vc-refresh-all-buffers ()
+  "Run vc-refresh-state on all buffers"
+  (interactive)
+  (dolist (b (buffer-list))
+    (with-current-buffer b (vc-refresh-state))))
+
 (defun rename-buffer-and-file ()
   "Rename the current buffer and the file it is visiting."
   (interactive)

@@ -62,24 +62,32 @@
   (define-key projectile-rails-mode-map (kbd "s-r") 'projectile-rails-command-map)
   (define-key projectile-rails-mode-map (kbd "C-c C-p") 'projectile-rails-command-map))
 
+(defun ibuffer-update-with-vc-refresh ()
+  (interactive)
+  (vc-refresh-all-buffers)
+  (ibuffer-update nil))
+
 (use-package ibuffer-vc
   :config
   (add-hook 'ibuffer-hook
-    (lambda ()
-      (ibuffer-vc-set-filter-groups-by-vc-root)
-      (unless (eq ibuffer-sorting-mode 'filename/process)
-        (ibuffer-do-sort-by-filename/process)))))
+            (lambda ()
+              (ibuffer-vc-set-filter-groups-by-vc-root)
+              (unless (eq ibuffer-sorting-mode 'filename/process)
+                (ibuffer-do-sort-by-filename/process))))
+  :init
+  (setq ibuffer-show-empty-filter-groups nil)
+  (setq ibuffer-formats
+        '((mark modified read-only vc-status-mini
+                " "
+                (name 32 32 :left :elide)
+                " "
+                (mode 16 16 :left :elide)
+                " "
+                filename-and-process)))
 
-(setq ibuffer-formats
-      '((mark modified read-only vc-status-mini
-              " "
-              (name 32 32 :left :elide)
-              " "
-              (mode 16 16 :left :elide)
-              " "
-              filename-and-process)))
-
-(setq ibuffer-show-empty-filter-groups nil)
+  :bind
+  (:map ibuffer-mode-map
+        ("G" . ibuffer-update-with-vc-refresh)))
 
 (setq vc-follow-symlinks t)
 
