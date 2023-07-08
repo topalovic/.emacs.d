@@ -98,7 +98,6 @@
 (setq ls-lisp-use-insert-directory-program nil)
 
 (setq dired-listing-switches "-alh")
-(add-hook 'dired-mode-hook 'dired-hide-details-mode)
 
 (use-package dired-subtree
   :ensure t
