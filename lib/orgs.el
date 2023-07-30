@@ -6,6 +6,9 @@
 
 (setq org-agenda-files '("~/org/todo")
       org-agenda-use-time-grid nil
+      org-agenda-time-grid '((daily today require-timed)
+                             (800 1000 1200 1400 1600 1800 2000)
+                             " ..... " "")
       org-agenda-window-setup 'current-window
       org-modules '(org-habit)
       org-return-follows-link t
