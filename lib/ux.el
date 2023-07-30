@@ -35,7 +35,7 @@
 
 ;; turn on line numbers
 (column-number-mode 1)
-(global-linum-mode 1)
+(global-display-line-numbers-mode 1)
 
 ;; highlight the current line
 (global-hl-line-mode 1)
