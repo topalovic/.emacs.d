@@ -90,12 +90,14 @@
     (set-face-attribute 'spaceline-highlight-face nil :foreground (doom-color 'bg) :background (doom-color 'fg))))
 
 (use-package all-the-icons)
-
 (use-package all-the-icons-dired
   :config
   (add-hook 'dired-mode-hook 'all-the-icons-dired-mode))
 
-(use-package spaceline)
+(use-package spaceline
+  :init
+  (setq spaceline-byte-compile nil)) ; speeds up startup time greatly
+
 (use-package spaceline-all-the-icons
   :after spaceline
 
