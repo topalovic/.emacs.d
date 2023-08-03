@@ -34,8 +34,9 @@
 (setq scroll-conservatively 101)
 
 ;; turn on line numbers
+(use-package nlinum)
+(global-nlinum-mode 1)
 (column-number-mode 1)
-(global-display-line-numbers-mode 1)
 
 ;; highlight the current line
 (global-hl-line-mode 1)
