@@ -23,6 +23,7 @@
 
 (require 'use-package-ensure)
 (setq use-package-always-ensure t)
+(setq use-package-compute-statistics t)
 
 ;; keep config tidy
 
