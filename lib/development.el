@@ -64,7 +64,6 @@
 (use-package json-mode)
 (use-package yaml-mode)
 (use-package slim-mode)
-(use-package coffee-mode)
 
 ;; LaTeX
 
