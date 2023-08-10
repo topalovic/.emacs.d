@@ -34,4 +34,7 @@
 (global-set-key (kbd "C-c \\") 'smart-shell-command)
 (global-set-key (kbd "C-c a") 'org-agenda)
 
+;; input
+(define-key input-decode-map [?\s-2] [?€])
+
 (provide 'keys)
