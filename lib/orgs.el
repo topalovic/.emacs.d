@@ -11,6 +11,9 @@
                              " ..... " "")
       org-agenda-window-setup 'current-window
       org-modules '(org-habit)
+      org-habit-preceding-days 24
+      org-habit-following-days 4
+      org-habit-show-all-today t
       org-return-follows-link t
       org-hide-leading-stars t
       org-adapt-indentation t
