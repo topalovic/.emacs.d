@@ -100,7 +100,6 @@
 (setq dired-listing-switches "-alh")
 
 (use-package dired-subtree
-  :ensure t
   :after dired
   :init
   (setq dired-subtree-use-backgrounds nil)
