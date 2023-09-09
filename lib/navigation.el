@@ -29,10 +29,9 @@
    ("C-x C-m" . counsel-M-x)
    ("C-x C-f" . counsel-find-file)
    ("C-x b" . counsel-switch-buffer)
-   ("C-c k" . counsel-ag))
+   ("C-c k" . counsel-rg))
 
   :init
-  (setq counsel-ag-base-command "ag --width 128 --nocolor --nogroup %s")
   (setq counsel-describe-function-function #'helpful-callable)
   (setq counsel-describe-variable-function #'helpful-variable)
 
