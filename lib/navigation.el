@@ -51,6 +51,7 @@
 
   :init
   (setq projectile-completion-system 'ivy)
+  (setq projectile-git-use-fd nil)
 
   :config
   (projectile-mode 1))
