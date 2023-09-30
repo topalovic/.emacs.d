@@ -23,6 +23,7 @@
 
 ;; editing
 (global-set-key (kbd "C-r") 'query-replace-regexp)
+(global-set-key (kbd "C-|") 'string-insert-rectangle)
 (global-set-key (kbd "C-S-d") 'duplicate-current-line)
 (global-set-key (kbd "M-Q") 'unfill-paragraph)
 
