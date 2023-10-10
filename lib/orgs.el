@@ -20,6 +20,10 @@
       org-startup-folded 'showall
       calendar-week-start-day 1)
 
+;; presenting from org
+
+(use-package org-present)
+
 ;; wiki
 
 (use-package deft
