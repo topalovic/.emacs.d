@@ -1,6 +1,6 @@
 ;;; ux
 
-(fset 'yes-or-no-p 'y-or-n-p)
+(setq use-short-answers t)
 
 ;; key assistance
 (use-package which-key
