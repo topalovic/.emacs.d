@@ -29,7 +29,7 @@
    ("C-x C-m" . counsel-M-x)
    ("C-x C-f" . counsel-find-file)
    ("C-x b" . counsel-switch-buffer)
-   ("C-c k" . counsel-rg))
+   ("C-c s" . counsel-rg))
 
   :init
   (setq counsel-describe-function-function #'helpful-callable)
