@@ -36,6 +36,6 @@
 (global-set-key (kbd "C-c a") 'org-agenda)
 
 ;; input
-(define-key input-decode-map [?\s-2] [?€])
+(global-set-key (kbd "s-2") (lambda () (interactive) (insert ?€)))
 
 (provide 'keys)
