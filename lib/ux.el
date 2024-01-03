@@ -78,6 +78,8 @@
   :config
   (doom-themes-org-config)
 
+  (set-face-attribute 'font-lock-string-face nil :foreground "#d2b4a0")
+
   (with-eval-after-load 'org
     (set-face-attribute 'org-level-1 nil :height 1.0)
     (set-face-attribute 'org-date nil :foreground (doom-darken (doom-color 'yellow) 0.12))
