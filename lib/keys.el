@@ -18,6 +18,7 @@
 ;; marking & killing
 (global-set-key (kbd "M-o") 'mark-whole-word)
 (global-set-key (kbd "C-w") 'backward-kill-word)
+(global-set-key (kbd "C-S-k") 'kill-whole-line)
 (global-set-key (kbd "C-x C-k") 'kill-region)
 (global-set-key (kbd "C-c C-k") 'kill-region)
 
