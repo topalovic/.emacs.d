@@ -24,18 +24,6 @@
 
 (use-package org-present)
 
-;; wiki
-
-(use-package deft
-  :config
-  (setq deft-extensions '("org" "md")
-        deft-directory "~/org/wiki"
-        deft-recursive t
-        deft-use-filename-as-title t
-        deft-auto-save-interval 0))
-
-(defalias 'wiki 'deft)
-
 ;; babel
 
 (org-babel-do-load-languages
