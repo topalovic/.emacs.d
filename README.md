@@ -3,12 +3,12 @@
 
 ## Setup
 
-No setup necessary, just launch Emacs and `use-package` will install everything.
+No manual setup necessary, just launch Emacs and let `use-package` install everything.
 
 ## Cleanup
 
 To nuke all the cache, including installed packages:
 
 ```sh
-$ make clean
+$ git clean -fdX
 ```
