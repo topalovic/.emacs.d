@@ -47,6 +47,10 @@
 (setq org-confirm-babel-evaluate nil)
 (setq org-edit-src-content-indentation 0)
 
+;; html
+
+(setq org-html-checkbox-type 'html)
+
 ;; latex
 
 ;; to be inserted in every latex header
