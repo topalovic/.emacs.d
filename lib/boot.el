@@ -21,6 +21,13 @@
 (setq use-package-always-ensure t)
 (setq use-package-compute-statistics t)
 
+(use-package auto-package-update
+  :config
+  (setq auto-package-update-interval 5
+        auto-package-update-delete-old-versions t
+        auto-package-update-last-update-day-path (expand-file-name "var/auto-package-update-timestamp" user-emacs-directory))
+  (auto-package-update-maybe))
+
 ;; keep config tidy
 
 (use-package no-littering)
