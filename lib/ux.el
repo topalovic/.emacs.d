@@ -68,9 +68,15 @@
 (add-to-list 'default-frame-alist
              '(fullscreen . maximized))
 
+;; folding
+(use-package yafolding
+  :config
+  (add-hook 'prog-mode-hook 'yafolding-mode))
+
 ;; font
 (add-to-list 'default-frame-alist '(font . "Fira Mono for Powerline-11"))
 
+;; theme
 (use-package doom-themes
   :init
   (load-theme 'doom-spacegrey t)
