@@ -52,6 +52,11 @@
   (setq rustic-lsp-client 'eglot
         rustic-format-on-save nil))
 
+;; typescript
+
+(add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-ts-mode))
+(add-to-list 'auto-mode-alist '("\\.tsx\\'" . typescript-ts-mode))
+
 ;; markup / frontend
 
 (use-package markdown-mode
