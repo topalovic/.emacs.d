@@ -101,6 +101,8 @@
 (use-package dockerfile-mode
   :mode "Dockerfile")
 
+(use-package terraform-mode)
+
 (use-package smartparens
   :config
   (smartparens-global-mode 1))
