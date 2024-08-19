@@ -20,9 +20,9 @@
       org-startup-folded 'showall
       calendar-week-start-day 1)
 
-;; presenting from org
+;; hide emphasis markers
 
-(use-package org-present)
+(setq org-hide-emphasis-markers t)
 
 ;; babel
 
@@ -67,5 +67,9 @@
 
 (setq org-export-with-author nil)
 (setq org-export-with-date nil)
+
+;; presenting from org
+
+(use-package org-present)
 
 (provide 'orgs)
