@@ -15,10 +15,12 @@
 (use-package ellama
   :init
   (require 'llm-ollama)
+  (setq ollama-model
+        (if (eq system-type 'darwin) "mistral" "mixtral"))
   (setq ellama-provider
         (make-llm-ollama
-         :chat-model "mistral"
-         :embedding-model "mistral"))
+         :chat-model ollama-model
+         :embedding-model ollama-model))
   (setq ellama-sessions-directory
         (expand-file-name "var/ellama" user-emacs-directory))
   (setq ellama-keymap-prefix "C-c e"))
