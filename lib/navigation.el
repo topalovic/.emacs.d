@@ -54,7 +54,8 @@
   (setq projectile-git-use-fd nil)
 
   :config
-  (projectile-mode 1))
+  (projectile-mode 1)
+  (remove-hook 'buffer-list-update-hook #'projectile-track-known-projects-find-file-hook))
 
 (use-package projectile-rails
   :config
