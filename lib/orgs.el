@@ -22,10 +22,6 @@
       org-startup-folded 'showall
       calendar-week-start-day 1)
 
-;; hide emphasis markers
-
-(setq org-hide-emphasis-markers t)
-
 ;; babel
 
 (org-babel-do-load-languages
@@ -69,6 +65,14 @@
 
 (setq org-export-with-author nil)
 (setq org-export-with-date nil)
+
+;; hide emphasis markers unless under cursor
+
+(setq org-hide-emphasis-markers t)
+
+(use-package org-appear
+  :config
+  (add-hook 'org-mode-hook 'org-appear-mode))
 
 ;; presenting from org
 
