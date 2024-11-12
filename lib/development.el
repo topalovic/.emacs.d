@@ -97,7 +97,7 @@
 
 (use-package magit
   :init
-  (setq magit-log-section-commit-count 25))
+  (setq magit-log-section-commit-count 50))
 
 (use-package dockerfile-mode
   :mode "Dockerfile")
