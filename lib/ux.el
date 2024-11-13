@@ -68,6 +68,24 @@
 (add-to-list 'default-frame-alist
              '(fullscreen . maximized))
 
+;; tame popup buffers
+(use-package popper
+  :bind (("M-`" . popper-cycle)
+         ("C-M-`" . popper-toggle-type))
+
+  :init
+  (setq popper-mode-line nil
+        popper-reference-buffers
+        '("\\*Messages\\*"
+          "Output\\*$"
+          "\\*Async Shell Command\\*"
+          help-mode
+          compilation-mode
+          rspec-compilation-mode))
+
+  (popper-mode 1)
+  (popper-echo-mode 1))
+
 ;; folding
 (use-package yafolding
   :config
