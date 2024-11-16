@@ -15,7 +15,7 @@
 (use-package ellama
   :init
   (require 'llm-ollama)
-  (setq ollama-model "mistral-nemo")
+  (setq ollama-model "mistral-small")
   (setq ellama-provider
         (make-llm-ollama
          :chat-model ollama-model
