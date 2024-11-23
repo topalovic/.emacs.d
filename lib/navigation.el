@@ -106,6 +106,7 @@
   (setq dired-subtree-use-backgrounds nil)
   :bind
   (:map dired-mode-map
-              ("TAB" . dired-subtree-toggle)))
+              ("TAB" . dired-subtree-toggle)
+              ("DEL" . dired-up-directory)))
 
 (provide 'navigation)
