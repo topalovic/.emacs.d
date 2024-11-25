@@ -99,6 +99,7 @@
 (setq ls-lisp-use-insert-directory-program nil)
 
 (setq dired-listing-switches "-alh")
+(setq dired-kill-when-opening-new-dired-buffer t)
 
 (use-package dired-subtree
   :after dired
