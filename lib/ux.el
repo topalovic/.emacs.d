@@ -52,7 +52,7 @@
 
 ;; use pulse for momentary highlighting
 (setq pulse-flag t)
-(setq pulse-delay 0.07)
+(setq pulse-delay 0.05)
 
 ;; do not display continuation lines
 (setq-default truncate-lines 1)
