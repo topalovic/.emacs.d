@@ -99,6 +99,8 @@
   :init
   (setq magit-log-section-commit-count 50))
 
+(use-package csv-mode)
+
 (use-package dockerfile-mode
   :mode "Dockerfile")
 
