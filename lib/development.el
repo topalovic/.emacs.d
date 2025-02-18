@@ -2,17 +2,16 @@
 
 ;; ai
 
-(use-package ellama
-  :init
-  (require 'llm-ollama)
-  (setq ollama-model "mistral-small")
-  (setq ellama-provider
-        (make-llm-ollama
-         :chat-model ollama-model
-         :embedding-model ollama-model))
-  (setq ellama-sessions-directory
-        (expand-file-name "var/ellama" user-emacs-directory))
-  (setq ellama-keymap-prefix "C-c e"))
+(use-package gptel
+  :config
+  (add-hook 'gptel-mode-hook #'visual-line-mode)
+
+  (setq
+   gptel-model 'mistral-small
+   gptel-backend (gptel-make-ollama "Ollama"
+                   :host "localhost:11434"
+                   :stream t
+                   :models '(mistral-small))))
 
 ;; eglot
 
