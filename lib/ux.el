@@ -2,6 +2,8 @@
 
 (setq use-short-answers t)
 
+(setq large-file-warning-threshold 50000000)
+
 ;; key assistance
 (use-package which-key
   :config
