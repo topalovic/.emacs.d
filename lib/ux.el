@@ -4,6 +4,10 @@
 
 (setq large-file-warning-threshold 50000000)
 
+;; suppress some warnings
+(add-to-list 'warning-suppress-types '(org-element org-element-parser))
+(add-to-list 'warning-suppress-log-types '(org-element org-element-parser))
+
 ;; key assistance
 (use-package which-key
   :config
