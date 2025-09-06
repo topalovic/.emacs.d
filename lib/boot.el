@@ -4,10 +4,6 @@
 
 (setq gc-cons-threshold 100000000)
 
-(add-function :after
-              after-focus-change-function
-              (lambda () (unless (frame-focus-state) (garbage-collect))))
-
 ;; package
 
 (require 'package)
