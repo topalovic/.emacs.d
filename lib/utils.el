@@ -26,6 +26,15 @@
         (message "Deleted file %s" filename)
         (kill-buffer)))))
 
+(defun copy-file-path ()
+  "Copy and show the file path of the current buffer."
+  (interactive)
+  (if-let* ((file-path (buffer-file-name)))
+      (progn
+        (kill-new file-path)
+        (message "%s" file-path))
+    (user-error "Current buffer is not visiting a file")))
+
 (defun duplicate-current-line (&optional arg)
   "Duplicate the current line, optionally [arg] times."
   (interactive "p")
