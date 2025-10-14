@@ -13,8 +13,7 @@
       org-modules '(org-habit)
       org-priority-lowest ?D
       org-priority-default ?C
-      org-habit-preceding-days 25
-      org-habit-following-days 3
+      org-habit-following-days 2
       org-habit-show-all-today t
       org-return-follows-link t
       org-hide-leading-stars t
