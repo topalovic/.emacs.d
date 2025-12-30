@@ -148,4 +148,28 @@
   (spaceline-toggle-all-the-icons-projectile-off)
   (spaceline-all-the-icons-theme))
 
+;; ElDoc: do not truncate docs for echo area.
+;; See https://www.reddit.com/r/emacs/comments/1ey307o/how_to_make_emacs_30_display_type_information_in/lvpm7ie/
+(advice-add 'eldoc--echo-area-render :override
+(lambda (docs)
+  "Similar to `eldoc--format-doc-buffer', but for echo area.
+   Helper for `eldoc-display-in-echo-area'."
+  (cl-loop for (item . rest) on docs
+           for (this-doc . plist) = item
+           for echo = (plist-get plist :echo)
+           for thing = (plist-get plist :thing)
+           unless (eq echo 'skip) do
+           (setq this-doc
+                 (cond ((integerp echo) this-doc)
+                       ((stringp echo) echo)
+                       (t this-doc)))
+           (when thing (setq this-doc
+                             (concat
+                              (propertize (format "%s" thing)
+                                          'face (plist-get plist :face))
+                              ": "
+                              this-doc)))
+           (insert this-doc)
+           (when rest (insert "\n")))))
+
 (provide 'ux)
