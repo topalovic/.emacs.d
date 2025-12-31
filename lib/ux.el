@@ -172,4 +172,6 @@
            (insert this-doc)
            (when rest (insert "\n")))))
 
+(setq eldoc-echo-area-prefer-doc-buffer t)
+
 (provide 'ux)
