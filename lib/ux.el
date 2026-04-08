@@ -127,7 +127,15 @@
 (use-package all-the-icons)
 (use-package all-the-icons-dired
   :config
-  (add-hook 'dired-mode-hook 'all-the-icons-dired-mode))
+  (add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
+
+  (add-to-list 'all-the-icons-extension-icon-alist '("conf" all-the-icons-octicon "settings" :face all-the-icons-dyellow))
+  (add-to-list 'all-the-icons-extension-icon-alist '("toml" all-the-icons-octicon "settings" :face all-the-icons-dyellow))
+  (add-to-list 'all-the-icons-extension-icon-alist '("rbi"  all-the-icons-octicon "ruby"     :face all-the-icons-lred))
+  (add-to-list 'all-the-icons-extension-icon-alist '("ru"   all-the-icons-octicon "ruby"     :face all-the-icons-lred))
+
+  (add-to-list 'all-the-icons-regexp-icon-alist '("^Procfile"  all-the-icons-alltheicon "terminal" :face all-the-icons-purple))
+  (add-to-list 'all-the-icons-regexp-icon-alist '("^Rakefile$" all-the-icons-alltheicon "ruby-alt" :face all-the-icons-red)))
 
 (use-package spaceline
   :init
