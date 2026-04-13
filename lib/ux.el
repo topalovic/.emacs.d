@@ -182,4 +182,7 @@
 
 (setq eldoc-echo-area-prefer-doc-buffer t)
 
+;; man
+(setq Man-width-max 110)
+
 (provide 'ux)
