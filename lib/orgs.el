@@ -11,8 +11,6 @@
                              " ..... " "")
       org-agenda-window-setup 'current-window
       org-modules '(org-habit)
-      org-priority-lowest ?D
-      org-priority-default ?C
       org-habit-following-days 2
       org-habit-show-all-today t
       org-return-follows-link t
