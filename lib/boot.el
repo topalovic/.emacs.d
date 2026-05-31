@@ -10,6 +10,8 @@
 
 (setq package-enable-at-startup nil)
 
+(setq package-install-upgrade-built-in t)
+
 (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 
 (setq package-archives
