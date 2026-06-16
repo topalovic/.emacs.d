@@ -35,17 +35,6 @@
         (message "%s" file-path))
     (user-error "Current buffer is not visiting a file")))
 
-(defun duplicate-current-line (&optional arg)
-  "Duplicate the current line, optionally [arg] times."
-  (interactive "p")
-  (save-excursion
-    (let ((n (or arg 1))
-          (current-line (thing-at-point 'line)))
-      (when (or (= 1 (forward-line 1)) (eq (point) (point-max)))
-        (newline))
-      (dotimes (_ n)
-        (insert current-line)))))
-
 (defun unfill-paragraph (&optional region)
   "Take a multi-line paragraph and make it into a single line of text."
   (interactive (progn (barf-if-buffer-read-only) '(t)))

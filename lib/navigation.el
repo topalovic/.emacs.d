@@ -100,6 +100,7 @@
 
 (setq dired-listing-switches "-alh")
 (setq dired-kill-when-opening-new-dired-buffer t)
+(setq dired-dwim-target t)
 
 (use-package dired-subtree
   :after dired

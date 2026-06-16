@@ -23,9 +23,12 @@
 (global-set-key (kbd "C-c C-k") 'kill-region)
 
 ;; editing
+(global-set-key (kbd "M-u") 'upcase-dwim)
+(global-set-key (kbd "M-l") 'downcase-dwim)
+(global-set-key (kbd "M-c") 'capitalize-dwim)
+(global-set-key (kbd "C-S-d") 'duplicate-dwim)
 (global-set-key (kbd "C-r") 'query-replace-regexp)
 (global-set-key (kbd "C-|") 'string-insert-rectangle)
-(global-set-key (kbd "C-S-d") 'duplicate-current-line)
 (global-set-key (kbd "M-Q") 'unfill-paragraph)
 
 ;; tools
