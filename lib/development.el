@@ -7,11 +7,11 @@
   (add-hook 'gptel-mode-hook #'visual-line-mode)
 
   (setq
-   gptel-model 'mistral-small
    gptel-backend (gptel-make-ollama "Ollama"
                    :host "localhost:11434"
                    :stream t
-                   :models '(mistral-small))))
+                   :models '(gemma4:26b)
+                   :request-params '(:think :json-false))))
 
 ;; eglot
 
