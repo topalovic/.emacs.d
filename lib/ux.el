@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t -*-
+
 ;;; ux
 
 (setq use-short-answers t)

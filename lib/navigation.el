@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t -*-
+
 ;;; navigation
 
 (use-package smex)

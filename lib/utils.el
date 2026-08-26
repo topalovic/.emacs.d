@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t -*-
+
 ;;; utils
 
 (defun vc-refresh-all-buffers ()

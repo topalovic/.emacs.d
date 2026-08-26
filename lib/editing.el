@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t -*-
+
 ;;; editing
 
 ;; disable backups & auto-save

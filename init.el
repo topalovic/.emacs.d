@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t; -*-
+
 ;;; init
 
 (add-to-list 'load-path "~/.emacs.d/lib")

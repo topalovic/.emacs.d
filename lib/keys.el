@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t -*-
+
 ;;; keys
 
 ;; disable intrusive OS keys
