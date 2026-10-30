@@ -36,6 +36,8 @@
             (unless (derived-mode-p 'special-mode 'ses-mode)
               (delete-trailing-whitespace))))
 
+(use-package sudo-edit)
+
 (use-package wgrep
   :init
   (setq wgrep-auto-save-buffer t))
